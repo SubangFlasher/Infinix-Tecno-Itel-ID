@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REMOVE PERMANEN INFINIX/TECNO/ITEL ID LOKAL</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(255,0,0,.22), transparent 30%),
+        radial-gradient(circle at 90% 90%, rgba(255,255,255,.08), transparent 30%),
+        linear-gradient(135deg,#050505,#160000,#080808);
+    overflow-x:hidden;
+}
+
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:-2;
+    animation:float 8s ease-in-out infinite alternate;
+}
+
+body::before{
+    background:#e60000;
+    top:-150px;
+    left:-100px;
+}
+
+body::after{
+    background:#fff;
+    opacity:.12;
+    right:-150px;
+    bottom:-100px;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    from{transform:translate(0,0) scale(1);}
+    to{transform:translate(50px,40px) scale(1.2);}
+}
+
+
+.particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.particle{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:#fff;
+    border-radius:50%;
+    opacity:.4;
+    animation:particleMove linear infinite;
+}
+
+@keyframes particleMove{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    20%{opacity:.6;}
+    80%{opacity:.5;}
+    to{
+        transform:translateY(-20vh);
+        opacity:0;
+    }
+}
+
+
+nav{
+    width:100%;
+    padding:18px 6%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:5;
+}
+
+.logo{
+    font-weight:900;
+    letter-spacing:2px;
+    font-size:18px;
+    text-align:center;
+}
+
+.logo span{
+    color:#ff1b1b;
+}
+
+
+.container{
+    width:min(650px,92%);
+    margin:20px auto 50px;
+}
+
+
+.hero{
+    text-align:center;
+    margin-bottom:25px;
+    animation:fadeDown 1s ease;
+}
+
+.hero .badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+    color:#ff4545;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(27px,7vw,48px);
+    line-height:1.05;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.hero h1 span{
+    color:#ff1515;
+    text-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+.hero p{
+    color:#aaa;
+    font-size:13px;
+    margin-top:12px;
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.card{
+    position:relative;
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.075);
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(20px);
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55),
+        inset 0 0 30px rgba(255,0,0,.035);
+    overflow:hidden;
+    animation:cardIn 1s ease .2s both;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:70%;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#fff,#f00,transparent);
+    animation:scan 4s linear infinite;
+}
+
+@keyframes scan{
+    0%{left:-100%;}
+    100%{left:130%;}
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:9px;
+    font-size:12px;
+    font-weight:bold;
+    color:#ddd;
+    letter-spacing:.5px;
+}
+
+.input,
+select{
+    width:100%;
+    height:52px;
+    padding:0 15px;
+    color:#fff;
+    background:rgba(0,0,0,.45);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:13px;
+    outline:none;
+    transition:.3s;
+}
+
+.input:focus,
+select:focus{
+    border-color:#ff2020;
+    box-shadow:0 0 20px rgba(255,0,0,.18);
+    transform:translateY(-2px);
+}
+
+select option{
+    background:#111;
+    color:#fff;
+}
+
+
+.id-options{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.id-option{
+    position:relative;
+}
+
+.id-option input{
+    display:none;
+}
+
+.id-option label{
+    margin:0;
+    padding:16px 5px;
+    text-align:center;
+    border-radius:13px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(0,0,0,.35);
+    cursor:pointer;
+    transition:.3s;
+    font-size:11px;
+}
+
+.id-option input:checked + label{
+    background:linear-gradient(135deg,#ff0000,#990000);
+    border-color:#ff3838;
+    box-shadow:0 0 25px rgba(255,0,0,.3);
+    transform:translateY(-3px);
+}
+
+
+.upload-box{
+    position:relative;
+    border:1px dashed rgba(255,255,255,.3);
+    border-radius:15px;
+    min-height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    overflow:hidden;
+    background:rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.upload-box:hover{
+    border-color:#ff2222;
+    background:rgba(255,0,0,.06);
+}
+
+.upload-box input{
+    display:none;
+}
+
+.upload-content{
+    padding:20px;
+}
+
+.upload-icon{
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+.upload-content strong{
+    display:block;
+    font-size:13px;
+}
+
+.upload-content small{
+    display:block;
+    color:#888;
+    margin-top:5px;
+}
+
+.preview{
+    display:none;
+    width:100%;
+    max-height:220px;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+
+.server-card{
+    border:1px solid rgba(255,0,0,.45);
+    background:linear-gradient(
+        135deg,
+        rgba(255,0,0,.15),
+        rgba(0,0,0,.4)
+    );
+    padding:18px;
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.server-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(255,0,0,.15);
+}
+
+.server-name{
+    font-weight:bold;
+}
+
+.server-status{
+    font-size:10px;
+    color:#54ff75;
+    margin-top:5px;
+}
+
+.server-price{
+    font-size:21px;
+    font-weight:900;
+    color:#ff2525;
+}
+
+
+.order-btn{
+    width:100%;
+    height:58px;
+    margin-top:8px;
+    border:0;
+    border-radius:15px;
+    color:#fff;
+    background:linear-gradient(90deg,#b50000,#ff1111,#b50000);
+    background-size:200% 100%;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:1px;
+    cursor:pointer;
+    box-shadow:0 12px 35px rgba(255,0,0,.3);
+    transition:.3s;
+    animation:buttonGlow 3s infinite;
+}
+
+.order-btn:hover{
+    transform:translateY(-3px);
+    background-position:100% 0;
+    box-shadow:0 18px 45px rgba(255,0,0,.45);
+}
+
+.order-btn:active{
+    transform:scale(.97);
+}
+
+@keyframes buttonGlow{
+    0%,100%{box-shadow:0 10px 30px rgba(255,0,0,.25);}
+    50%{box-shadow:0 10px 45px rgba(255,0,0,.5);}
+}
+
+
+.join-box{
+    margin-top:20px;
+    padding:22px;
+    text-align:center;
+    border-radius:18px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        rgba(255,0,0,.08)
+    );
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.join-box small{
+    color:#999;
+    font-size:11px;
+}
+
+.join-box h3{
+    margin:7px 0 13px;
+    font-size:17px;
+}
+
+.join-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    background:#fff;
+    color:#111;
+    padding:11px 18px;
+    border-radius:10px;
+    font-size:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.join-btn:hover{
+    background:#ff1515;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+
+footer{
+    text-align:center;
+    color:#666;
+    font-size:10px;
+    margin-top:25px;
+}
+
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+    transform:translate(-50%,100px);
+    background:#151515;
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+    padding:13px 20px;
+    border-radius:50px;
+    font-size:12px;
+    z-index:99;
+    opacity:0;
+    transition:.4s;
+}
+
+.toast.show{
+    transform:translate(-50%,0);
+    opacity:1;
+}
+
+@media(max-width:480px){
+    .card{
+        padding:18px;
+        border-radius:20px;
+    }
+
+    .id-options{
+        gap:7px;
+    }
+
+    .id-option label{
+        font-size:10px;
+        padding:14px 3px;
+    }
+
+    .server-price{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="particles" id="particles"></div>
+
+<nav>
+    <div class="logo">
+        GSM <span>UNLOCKING</span> INDONESIA
+    </div>
+</nav>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="badge">
+            ONLINE SERVICE • FAST PROCESS
+        </div>
+
+        <h1>
+            REMOVE PERMANEN<br>
+            <span>INFINIX / TECNO / ITEL ID LOKAL</span>
+        </h1>
+
+        <p>
+            Silakan isi data dengan benar sebelum melakukan order.
+        </p>
+
+    </section>
+
+    <div class="card">
+
+        
+        <div class="form-group">
+
+            <label>TYPE HANDPHONE</label>
+
+            <input
+                type="text"
+                id="phoneType"
+                class="input"
+                placeholder="Contoh: Infinix Hot 60 Pro"
+                autocomplete="off"
+            >
+
+        </div>
+
+        
+        <div class="form-group">
+
+            <label>PILIH TYPE ID</label>
+
+            <div class="id-options">
+
+                <div class="id-option">
+                    <input
+                        type="radio"
+                        id="infinix"
+                        name="idType"
+                        value="INFINIX ID"
+                    >
+                    <label for="infinix">
+                        INFINIX ID
+                    </label>
+                </div>
+
+                <div class="id-option">
+                    <input
+                        type="radio"
+                        id="tecno"
+                        name="idType"
+                        value="TECNO ID"
+                    >
+                    <label for="tecno">
+                        TECNO ID
+                    </label>
+                </div>
+
+                <div class="id-option">
+                    <input
+                        type="radio"
+                        id="itel"
+                        name="idType"
+                        value="ITEL ID"
+                    >
+                    <label for="itel">
+                        ITEL ID
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <div class="form-group">
+
+            <label>MASUKAN FOTO LOCK ID</label>
+
+            <label class="upload-box" for="lockPhoto">
+
+                <input
+                    type="file"
+                    id="lockPhoto"
+                    accept="image/*"
+                >
+
+                <div class="upload-content" id="uploadContent">
+
+                    <div class="upload-icon">📷</div>
+
+                    <strong>PILIH FOTO</strong>
+
+                    <small>
+                        JPG / JPEG / PNG
+                    </small>
+
+                </div>
+
+                <img
+                    id="preview"
+                    class="preview"
+                    alt="Preview"
+                >
+
+            </label>
+
+        </div>
+
+        
+        <div class="form-group">
+
+            <label>PILIH SERVER</label>
+
+            <div class="server-card">
+
+                <div>
+
+                    <div class="server-name">
+                        SERVER 1
+                    </div>
+
+                    <div class="server-status">
+                        ● SERVER ONLINE
+                    </div>
+
+                </div>
+
+                <div class="server-price">
+                    Rp120.000
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <button
+            class="order-btn"
+            onclick="orderNow()"
+        >
+            ORDER NOW
+        </button>
+
+        
+        <div class="join-box">
+
+            <small>
+                PUNYA BANYAK ORDER?
+            </small>
+
+            <h3>
+                MAU LEBIH MURAH?
+            </h3>
+
+            <a
+                href="https://gsmunlockingindonesiateam.com"
+                target="_blank"
+                class="join-btn"
+            >
+                JOIN WEBSITE DISINI !!
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 GSM UNLOCKING INDONESIA • ONLINE SERVICE
+    </footer>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 35; i++){
+
+    const p = document.createElement("div");
+
+    p.className = "particle";
+
+    p.style.left = Math.random() * 100 + "%";
+
+    p.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
+
+    p.style.animationDelay =
+        (Math.random() * 8) + "s";
+
+    p.style.opacity =
+        Math.random() * .6;
+
+    particles.appendChild(p);
+}
+
+
+
+
+const photoInput =
+    document.getElementById("lockPhoto");
+
+const preview =
+    document.getElementById("preview");
+
+const uploadContent =
+    document.getElementById("uploadContent");
+
+photoInput.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        preview.src = e.target.result;
+
+        preview.style.display = "block";
+
+        uploadContent.style.display = "none";
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
+
+
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 3000);
+}
+
+
+
+
+function orderNow(){
+
+    const phoneType =
+        document.getElementById("phoneType").value.trim();
+
+    const idSelected =
+        document.querySelector(
+            'input[name="idType"]:checked'
+        );
+
+    const photo =
+        document.getElementById("lockPhoto").files[0];
+
+
+    if(!phoneType){
+
+        showToast("⚠️ Silakan isi Type Handphone");
+
+        document.getElementById("phoneType").focus();
+
+        return;
+    }
+
+
+    if(!idSelected){
+
+        showToast("⚠️ Silakan pilih Type ID");
+
+        return;
+    }
+
+
+    if(!photo){
+
+        showToast("⚠️ Silakan masukan foto Lock ID");
+
+        return;
+    }
+
+
+    const idType =
+        idSelected.value;
+
+    const fileName =
+        photo.name;
+
+
+    const message =
+
+`🔥 ORDER REMOVE PERMANEN ID LOKAL
+
+━━━━━━━━━━━━━━━━━━
+
+📱 TYPE HANDPHONE
+${phoneType}
+
+🆔 TYPE ID
+${idType}
+
+🖥️ SERVER
+SERVER 1
+
+💰 HARGA
+Rp120.000
+
+📷 FOTO LOCK ID
+${fileName}
+
+━━━━━━━━━━━━━━━━━━
+
+Mohon diproses.
+
+Terima kasih.`;
+
+    
+    const whatsappNumber =
+        "6281223742357";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    showToast("✅ Mengarahkan ke WhatsApp...");
+
+
+    setTimeout(() => {
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }, 700);
+
+}
+
+</script>
+
+</body>
+</html>
